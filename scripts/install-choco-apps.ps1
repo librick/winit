@@ -1,20 +1,34 @@
+function ChocoInstall() {
+  [CmdletBinding()]
+  param (
+      [Parameter(Mandatory=$true, Position=0)]
+      [string] $PackageName,
+  )
+  $existing = choco search -r --local-only --id-only --exact $PackageName
+  if ($existing -ne $null and $existing.Length -gt 0) {
+    Write-Host "choco package ${existing} is already installed, skipping (searched for ${PackageName})"
+        -ForegroundColor green -BackgroundColor black;
+  } else {
+    choco install -r -y $PackageName
+  }
+}
 # Sysinternals
 choco install -r -y sysinternals --params "/InstallDir:C:\Tools\sysinternals"
 # Miscellaneous
-choco install -r -y brave
-choco install -r -y 7zip
-choco install -r -y bleachbit
-choco install -r -y blender
-choco install -r -y chocolateygui
-choco install -r -y cmder
-choco install -r -y deluge
-choco install -r -y gimp
-choco install -r -y keepassxc
-choco install -r -y libreoffice-still
-choco install -r -y openvpn
-choco install -r -y putty
-choco install -r -y rufus
-choco install -r -y sumatrapdf
-choco install -r -y syncthing
-choco install -r -y vlc
-choco install -r -y winscp
+ChocoInstall brave
+ChocoInstall 7zip
+ChocoInstall bleachbit
+ChocoInstall blender
+ChocoInstall chocolateygui
+ChocoInstall cmder
+ChocoInstall deluge
+ChocoInstall gimp
+ChocoInstall keepassxc
+ChocoInstall libreoffice-still
+ChocoInstall openvpn
+ChocoInstall putty
+ChocoInstall rufus
+ChocoInstall sumatrapdf
+ChocoInstall syncthing
+ChocoInstall vlc
+ChocoInstall winscp
