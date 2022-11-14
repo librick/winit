@@ -13,9 +13,13 @@ function RegPropIfItemExists() {
         $Value
     )
     if ((Get-Item -Path $Path).GetValue($Value) -ne $null) {
+      Write-Host "wrote value ${Value} to ${Path} under ${Name}" -ForegroundColor green -BackgroundColor black
       New-ItemProperty -Path $Path -Name $Name -Value $Value -Type Dword -Force
+    } else {
+      Write-Host "found existing ItemProperty in ${Path} under ${Name}, skipped New-ItemProperty call" -ForegroundColor yellow -BackgroundColor black
     }
 }
+
 # Call New-ItemProperty and optionally New-Item if no item at the provided path exists
 function RegProp() {
     [CmdletBinding()]
@@ -31,6 +35,7 @@ function RegProp() {
       New-Item -Path $Path -Force | Out-Null
     }
     New-ItemProperty -Path $Path -Name $Name -Value $Value -PropertyType DWORD -Force
+    Write-Host "wrote value ${Value} to ${Path} under ${Name}" -ForegroundColor green -BackgroundColor black
 }
 
 # Call Remove-Item if and only if an item at the provided path exists
@@ -42,6 +47,9 @@ function DelItemIfItemExists() {
   )
   If (Test-Path $Path) {
     Remove-Item -Path $Path -Recurse -Force
+    Write-Host "removed item at path ${Path}" -ForegroundColor green -BackgroundColor black
+  } else {
+    Write-Host "no such item at path ${Path}, skipped Remove-Item call" -ForegroundColor green -BackgroundColor black
   }
 }
 
