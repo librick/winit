@@ -12,6 +12,7 @@ $($o.Namespace("shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}").Items() | where
 # Pin folders
 $o.Namespace('C:\Users\user').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\ProgramData\chocolatey').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\Tools\sysinternals').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Users\user\syncthing').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Program Files (x86)\Steam').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Users\user\Documents').Self.InvokeVerb("pintohome");
