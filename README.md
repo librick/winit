@@ -19,3 +19,7 @@ Run the scripts
 - Change default apps
     - Settings > Apps > Brave
     - Settings > Apps > VLC media player
+
+## Misc. Notes
+Use sysinternals `Procmon.exe` to check which registry keys a program is accessing.  
+Use sysinternals `Autoruns.exe` to find how startup programs are called.  
