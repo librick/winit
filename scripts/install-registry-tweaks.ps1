@@ -11,8 +11,8 @@ $HideFileExt_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Ad
 $HideFileExt_Name    = 'HideFileExt'
 $Hidden_Name         = 'Hidden'
 # Create the key if it does not exist
-If (-NOT (Test-Path $RegistryPath)) {
-  New-Item -Path $RegistryPath -Force | Out-Null
+If (-NOT (Test-Path $HideFileExt_Path)) {
+  New-Item -Path $HideFileExt_Path -Force | Out-Null
 }
 # Now set the values
 New-ItemProperty -Path $HideFileExt_Path -Name $HideFileExt_Name -Value 0 -PropertyType DWORD -Force
