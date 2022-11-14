@@ -17,6 +17,8 @@ function RegPropIfItemExists() {
       New-ItemProperty -Path $Path -Name $Name -Value $Value -Type Dword -Force
     } else {
       Write-Host "found existing ItemProperty in ${Path} under ${Name}, skipped New-ItemProperty call" -ForegroundColor yellow -BackgroundColor black
+      Set-ItemProperty -Path $Path -Name $Name -Value $Value -Type Dword -Force
+      Write-Host "wrote value ${Value} to ${Path} under ${Name}" -ForegroundColor green -BackgroundColor black
     }
 }
 
