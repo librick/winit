@@ -1,5 +1,5 @@
 class ChocoHelper {
-    [bool]IsInstalled() {
+    static [bool]IsInstalled() {
         param(
             [Parameter(Mandatory=$true, Position=0)]
             [string] $PackageName
@@ -7,7 +7,7 @@ class ChocoHelper {
         $existing = choco search -r --local-only --id-only --exact $PackageName;
         return $existing -ne $null -and $existing.Length -gt 0;
     }
-    LogInstalled() {
+    static LogInstalled() {
         param(
             [Parameter(Mandatory=$true, Position=0)]
             [string] $PackageName
