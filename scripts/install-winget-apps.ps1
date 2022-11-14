@@ -1,12 +1,27 @@
 # Install important software with winget
+
+function WingetInstall() {
+  [CmdletBinding()]
+  param (
+      [Parameter(Mandatory=$true, Position=0)]
+      [string] $PackageName
+  )
+  winget install `
+    --exact `
+    --accept-package-agreements `
+    --accept-source-agreements `
+    --source winget `
+    --id $PackageName;
+}
+
 winget source update
 # Use the--source option to prevent
 # winget from trying to use the "msstore" source.
-winget install -e --id Git.Git --source winget
-winget install -e --id OpenVPNTechnologies.OpenVPN --source winget
-winget install -e --id Microsoft.VisualStudioCode --source winget
-winget install -e --id Mozilla.Firefox --source winget
-winget install -e --id Google.Chrome --source winget
-winget install -e --id Valve.Steam --source winget
-winget install -e --id Spotify.Spotify --source winget
-winget install -e --id OO-Software.ShutUp10 --source winget
+WingetInstall 'Git.Git'
+WingetInstall 'OpenVPNTechnologies.OpenVPN'
+WingetInstall 'Microsoft.VisualStudioCode'
+WingetInstall 'Mozilla.Firefox'
+WingetInstall 'Google.Chrome'
+WingetInstall 'Valve.Steam'
+WingetInstall 'Spotify.Spotify'
+WingetInstall 'OO-Software.ShutUp10'
