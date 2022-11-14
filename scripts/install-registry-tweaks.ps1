@@ -26,3 +26,8 @@ New-ItemProperty -Path $DynamicSearch_Path -Name $DynamicSearch_Name -Value 0 -T
 # Delete the recycle bin desktop shortcut
 $RecycleBin_Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}'
 Remove-Item -Path $RecycleBin_Path -Recurse -Force
+
+$ChatIcon_Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Chat'
+$ChatIcon_Name = 'ChatIcon'
+New-ItemProperty -Path $ChatIcon_Path -Name $ChatIcon_Name -Value 3 -Type Dword -Force
+
