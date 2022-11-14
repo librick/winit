@@ -29,7 +29,9 @@ If (Test-Path $RecycleBin_Path) {
   Remove-Item -Path $RecycleBin_Path -Recurse -Force
 }
 
-$ChatIcon_Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Chat'
-$ChatIcon_Name = 'ChatIcon'
-New-ItemProperty -Path $ChatIcon_Path -Name $ChatIcon_Name -Value 3 -Type Dword -Force
-
+#$ChatIcon_Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Chat'
+#$ChatIcon_Name = 'ChatIcon'
+#New-ItemProperty -Path $ChatIcon_Path -Name $ChatIcon_Name -Value 3 -Type Dword -Force
+$HideTaskViewButton_Path = 'HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Start\HideTaskViewButton'
+$HideTaskViewButton_Name = 'value'
+New-ItemProperty -Path $HideTaskViewButton_Path -Name $HideTaskViewButton_Name -Value 1 -Type Dword -Force
