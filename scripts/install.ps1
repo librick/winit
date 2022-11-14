@@ -1,5 +1,5 @@
 # Run other scripts
-C:\winit\scripts\install-settings.ps1
+C:\winit\scripts\install-registry-tweaks.ps1
 C:\winit\scripts\install-quick-access.ps1
 C:\winit\scripts\install-wallpapers.ps1
 
