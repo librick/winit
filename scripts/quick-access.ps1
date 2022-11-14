@@ -1,7 +1,10 @@
 # Add folders to Explorer's "Quick access" section
 
 # Create syncthing folder, ignore if it already exists
-if not exist C:\Users\user\syncthing mkdir C:\Users\user\syncthing
+if (-not (test-path "C:\Users\user\syncthing") ) {
+    md 'C:\Users\user\syncthing'|out-null
+}
+
 $o = new-object -com shell.application;
 # Remove all pinned folders
 # See: https://stackoverflow.com/questions/30051634/is-it-possible-programmatically-add-folders-to-the-windows-10-quick-access-panel
