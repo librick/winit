@@ -25,29 +25,29 @@ winget install -e --id Spotify.Spotify
 winget install -e --id OO-Software.ShutUp10
 # Install toolsroot
 mkdir C:\Tools
-choco install toolsroot
+choco install -r -y toolsroot
 # Sysinternals
-choco install sysinternals --params "/InstallDir:C:\Tools\sysinternals"
+choco install -r -y sysinternals --params "/InstallDir:C:\Tools\sysinternals"
 # Miscellaneous
-choco install brave
-choco install 7zip
-choco install 7zip.install
-choco install bleachbit
-choco install bleachbit.install
-choco install blender
-choco install chocolateygui
-choco install cmder
-choco install deluge
-choco install gimp
-choco install keepassxc
-choco install libreoffice-still
-choco install openvpn
-choco install putty
-choco install rufus
-choco install sumatrapdf
-choco install sumatrapdf.install
-choco install syncthing
-choco install vlc
-choco install vlc.install
-choco install winscp
-choco install winscp.install
+choco install -r -y brave
+choco install -r -y 7zip
+choco install -r -y 7zip.install
+choco install -r -y bleachbit
+choco install -r -y bleachbit.install
+choco install -r -y blender
+choco install -r -y chocolateygui
+choco install -r -y cmder
+choco install -r -y deluge
+choco install -r -y gimp
+choco install -r -y keepassxc
+choco install -r -y libreoffice-still
+choco install -r -y openvpn
+choco install -r -y putty
+choco install -r -y rufus
+choco install -r -y sumatrapdf
+choco install -r -y sumatrapdf.install
+choco install -r -y syncthing
+choco install -r -y vlc
+choco install -r -y vlc.install
+choco install -r -y winscp
+choco install -r -y winscp.install
