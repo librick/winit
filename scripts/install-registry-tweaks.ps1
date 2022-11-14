@@ -47,6 +47,6 @@ $DisableSearch_Path = 'HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Search\Dis
 $DisableSearch_Name = 'value'
 New-ItemProperty -Path $DisableSearch_Path -Name $DisableSearch_Name -Value 1 -Type Dword -Force
 
-$WindowsDisableSearch_Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search\DisableSearch'
-$WindowsDisableSearch_Name = 'value'
-New-ItemProperty -Path $WindowsDisableSearch_Path -Name $WindowsDisableSearch_Name -Value 1 -Type Dword -Force
+$SearchboxTaskbarMode_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search'
+$SearchbarTaskbarMode_Name = 'SearchboxTaskbarMode'
+New-ItemProperty -Path $SearchboxTaskbarMode_Path -Name $SearchbarTaskbarMode_Name -Value 0 -Type Dword -Force
