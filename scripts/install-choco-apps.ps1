@@ -1,6 +1,3 @@
-# Install toolsroot
-mkdir C:\Tools
-choco install -r -y toolsroot
 # Sysinternals
 choco install -r -y sysinternals --params "/InstallDir:C:\Tools\sysinternals"
 # Miscellaneous
