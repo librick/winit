@@ -42,6 +42,10 @@ New-ItemProperty -Path $HideTaskViewButton_Path -Name $HideTaskViewButton_Name -
 $TaskbarMn_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 $TaskbarMn_Name = 'TaskbarMn'
 New-ItemProperty -Path $TaskbarMn_Path -Name $TaskbarMn_Name -Value 0 -Type Dword -Force
+# Hide widgets in the taskbar
+$TaskbarDa_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+$TaskbarDa_Name = 'TaskbarDa'
+New-ItemProperty -Path $TaskbarDa_Path -Name $TaskbarDa_Name -Value 0 -Type Dword -Force
 # Hide the search input in the taskbar
 $SearchboxTaskbarMode_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search'
 $SearchbarTaskbarMode_Name = 'SearchboxTaskbarMode'
