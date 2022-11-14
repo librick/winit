@@ -1,3 +1,4 @@
+# Set the desktop wallpaper
 $setwallpapersrc = @"
 using System.Runtime.InteropServices;
 
