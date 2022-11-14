@@ -42,3 +42,7 @@ New-ItemProperty -Path $HideTaskViewButton_Path -Name $HideTaskViewButton_Name -
 $TaskbarMn_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 $TaskbarMn_Name = 'TaskbarMn'
 New-ItemProperty -Path $TaskbarMn_Path -Name $TaskbarMn_Name -Value 0 -Type Dword -Force
+
+$DisableSearch_Path = 'HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Search\DisableSearch'
+$DisableSearch_Name = 'value'
+New-ItemProperty -Path $DisableSearch_Path -Name $DisableSearch_Name -Value 1 -Type Dword -Force
