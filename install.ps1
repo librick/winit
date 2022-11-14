@@ -5,8 +5,13 @@
 # Install git with winget:
 # winget install --id Git.Git -e --source winget
 
+# Remove existing choco packages that might cause conflicts
+choco uninstall -y openvpn
+choco uninstall -y vscode vscode.installer
+choco uninstall -y firefox
+choco uninstall -y chrome
 # Install important software with winget
-winget install -e --id BraveSoftware.BraveBrowser
+winget source update
 winget install -e --id OpenVPNTechnologies.OpenVPN
 winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id Mozilla.Firefox
@@ -20,6 +25,7 @@ choco install toolsroot
 # Sysinternals
 choco install sysinternals --params "/InstallDir:C:\Tools\sysinternals"
 # Miscellaneous
+choco install brave
 choco install 7zip
 choco install 7zip.install
 choco install bleachbit
