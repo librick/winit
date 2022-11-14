@@ -34,8 +34,7 @@ function RegProp() {
     If (-NOT (Test-Path $Path)) {
       New-Item -Path $Path -Force | Out-Null
     }
-    New-ItemProperty -Path $Path -Name $Name -Value $Value -PropertyType DWORD -Force
-    Write-Host "wrote value ${Value} to ${Path} under ${Name}" -ForegroundColor green -BackgroundColor black
+    RegPropIfItemExists $Path $Name $Value
 }
 
 # Call Remove-Item if and only if an item at the provided path exists
