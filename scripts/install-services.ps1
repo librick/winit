@@ -18,4 +18,4 @@ if ((Get-Item -Path $KeepassXC_Path).GetValue($KeepassXC_Name) -ne $null) {
     Remove-ItemProperty -Path $KeepassXC_Path -Name $KeepassXC_Name -Force
 }
 # Add shortcut for syncthing
-mv "C:\winit\res\syncthing.exe.lnk" "${home}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
+cp "C:\winit\res\syncthing.exe.lnk" "${home}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
