@@ -8,7 +8,7 @@ function RegPropIfItemExists() {
         [Parameter(Mandatory=$true, Position=0)]
         [string] $Path,
         [Parameter(Mandatory=$true, Position=1)]
-        [string] $Name
+        [string] $Name,
         [Parameter(Mandatory=$true, Position=2)]
         $Value
     )
@@ -23,7 +23,7 @@ function RegProp() {
         [Parameter(Mandatory=$true, Position=0)]
         [string] $Path,
         [Parameter(Mandatory=$true, Position=1)]
-        [string] $Name
+        [string] $Name,
         [Parameter(Mandatory=$true, Position=2)]
         $Value
     )
