@@ -11,3 +11,4 @@ Get-AppxPackage Microsoft.Services.Store.Engagement | Remove-AppxPackage
 Get-AppxPackage *officehub* | Remove-AppxPackage
 Get-AppxPackage MicrosoftTeams | Remove-AppxPackage
 winget uninstall onedrive --source winget
+Get-AppPackage *disney* | Remove-AppPackage
