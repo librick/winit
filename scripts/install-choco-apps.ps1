@@ -2,7 +2,7 @@ function ChocoInstall() {
   [CmdletBinding()]
   param (
       [Parameter(Mandatory=$true, Position=0)]
-      [string] $PackageName,
+      [string] $PackageName
   )
   $existing = choco search -r --local-only --id-only --exact $PackageName
   if ($existing -ne $null and $existing.Length -gt 0) {
