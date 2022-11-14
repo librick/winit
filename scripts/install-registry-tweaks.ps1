@@ -24,5 +24,6 @@ $DynamicSearch_Name = 'IsDynamicSearchBoxEnabled'
 New-ItemProperty -Path $DynamicSearch_Path -Name $DynamicSearch_Name -Value 0 -Type Dword -Force
 
 # Delete the recycle bin desktop shortcut
-$RecycleBin_Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}'
-Remove-Item -Path $RecycleBin_Path -Recurse -Force
+$RecycleBin_Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace'
+$RecycleBin_Name = '{645FF040-5081-101B-9F08-00AA002F954E}'
+Remove-Item -Path $RecycleBin_Path -Name $RecycleBin_Name -Force
