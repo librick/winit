@@ -23,7 +23,7 @@ function ChocoInstall() {
 }
 
 function InstallSysInternals() {
-    $PackageName = sysinternals
+    $PackageName = "sysinternals"
     if ([ChocoHelper]::IsInstalled($PackageName)) {
         [ChocoHelper]::LogInstalled($PackageName);
     } else {
