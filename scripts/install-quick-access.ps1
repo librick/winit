@@ -21,6 +21,7 @@ $o.Namespace("${home}").Self.InvokeVerb("pintohome");
 $o.Namespace($chocolatey).Self.InvokeVerb("pintohome");
 $o.Namespace($sysinternals).Self.InvokeVerb("pintohome");
 $o.Namespace($syncthing).Self.InvokeVerb("pintohome");
+$o.Namespace("${home}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup")
 $o.Namespace($steam).Self.InvokeVerb("pintohome");
 $o.Namespace("${home}\Documents").Self.InvokeVerb("pintohome");
 $o.Namespace("${home}\Downloads").Self.InvokeVerb("pintohome");
