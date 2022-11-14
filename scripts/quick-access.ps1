@@ -14,3 +14,7 @@ $o.Namespace('C:\Users\user').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Users\user\syncthing').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Program Files (x86)\Steam').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\ProgramData\chocolatey').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\Users\user\Documents').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\Users\user\Downloads').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\Users\user\Pictures').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\Users\user\Videos').Self.InvokeVerb("pintohome");
