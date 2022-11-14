@@ -22,4 +22,4 @@ Run the scripts
 
 ## Misc. Notes
 Use sysinternals `Procmon.exe` to check which registry keys a program is accessing.  
-Use sysinternals `Autoruns.exe` to find how startup programs are called.  
+Use sysinternals `Autoruns.exe` to get info about startup programs.  
