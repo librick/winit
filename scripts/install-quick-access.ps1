@@ -1,5 +1,4 @@
 # Add folders to Explorer's "Quick access" section
-
 $chocolatey = "C:\ProgramData\chocolatey"
 $sysinternals = "C:\Tools\sysinternals"
 $syncthing = "C:\syncthing"
