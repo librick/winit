@@ -10,6 +10,7 @@ choco uninstall -y openvpn
 choco uninstall -y vscode vscode.installer
 choco uninstall -y firefox
 choco uninstall -y chrome
+choco uninstall -y steam-client
 choco uninstall -y sysinternals
 # Install important software with winget
 winget source update
@@ -17,6 +18,7 @@ winget install -e --id OpenVPNTechnologies.OpenVPN
 winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id Mozilla.Firefox
 winget install -e --id Google.Chrome
+winget install -e --id Valve.Steam
 
 # Disable confirmation prompts
 choco feature enable -n=allowGlobalConfirmation
