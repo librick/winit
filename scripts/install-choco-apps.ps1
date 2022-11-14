@@ -5,7 +5,7 @@ function ChocoInstall() {
       [string] $PackageName
   )
   $existing = choco search -r --local-only --id-only --exact $PackageName
-  if ($existing -ne $null and $existing.Length -gt 0) {
+  if ($existing -ne $null -and $existing.Length -gt 0) {
     Write-Host "choco package ${existing} is already installed, skipping (searched for ${PackageName})"
         -ForegroundColor green -BackgroundColor black;
   } else {
