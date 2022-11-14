@@ -15,14 +15,14 @@ choco feature enable -n=allowGlobalConfirmation
 #choco uninstall -y sysinternals
 # Install important software with winget
 winget source update
-winget install -e --id Git.Git
-winget install -e --id OpenVPNTechnologies.OpenVPN
-winget install -e --id Microsoft.VisualStudioCode
-winget install -e --id Mozilla.Firefox
-winget install -e --id Google.Chrome
-winget install -e --id Valve.Steam
-winget install -e --id Spotify.Spotify
-winget install -e --id OO-Software.ShutUp10
+winget install -e --id Git.Git --source winget
+winget install -e --id OpenVPNTechnologies.OpenVPN --source winget
+winget install -e --id Microsoft.VisualStudioCode --source winget
+winget install -e --id Mozilla.Firefox --source winget
+winget install -e --id Google.Chrome --source winget
+winget install -e --id Valve.Steam --source winget
+winget install -e --id Spotify.Spotify --source winget
+winget install -e --id OO-Software.ShutUp10 --source winget
 # Install toolsroot
 mkdir C:\Tools
 choco install -r -y toolsroot
