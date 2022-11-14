@@ -31,6 +31,9 @@ function DelPropIfItemExists() {
   )
   if ((Get-Item -Path $Path).GetValue($Name) -ne $null) {
     Remove-ItemProperty -Path $Path -Name $Name -Force
+    Write-Host "removed ItemProperty at path ${Path} under ${Name}" -ForegroundColor green -BackgroundColor black
+  } else {
+    Write-Host "no ItemProperty at ${Path} under ${Name}, skipped Remove-ItemProperty call" -ForegroundColor yellow -BackgroundColor black
   }
 }
 
@@ -60,7 +63,7 @@ function DelItemIfItemExists() {
     Remove-Item -Path $Path -Recurse -Force
     Write-Host "removed item at path ${Path}" -ForegroundColor green -BackgroundColor black
   } else {
-    Write-Host "no such item at path ${Path}, skipped Remove-Item call" -ForegroundColor green -BackgroundColor black
+    Write-Host "no item at path ${Path}, skipped Remove-Item call" -ForegroundColor green -BackgroundColor black
   }
 }
 
