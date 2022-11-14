@@ -32,6 +32,13 @@ If (Test-Path $RecycleBin_Path) {
 #$ChatIcon_Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Chat'
 #$ChatIcon_Name = 'ChatIcon'
 #New-ItemProperty -Path $ChatIcon_Path -Name $ChatIcon_Name -Value 3 -Type Dword -Force
+
+# Hide the task view button in the taskbar
 $HideTaskViewButton_Path = 'HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Start\HideTaskViewButton'
 $HideTaskViewButton_Name = 'value'
 New-ItemProperty -Path $HideTaskViewButton_Path -Name $HideTaskViewButton_Name -Value 1 -Type Dword -Force
+
+# Hide the chat/teams icon in the taskbar
+$TaskbarMn_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+$TaskbarMn_Name = 'TaskbarMn'
+New-ItemProperty -Path $TaskbarMn_Path -Name $TaskbarMn_Name -Value 0 -Type Dword -Force
