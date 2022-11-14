@@ -45,13 +45,13 @@ function DelItemIfItemExists() {
   }
 }
 
-RegPropIfItemExists('HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', 'SystemUsesLightTheme', 0); # Force dark theme
-RegPropIfItemExists('HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', 'NoLockScreen', 1); # Disable lock screen, go right to login
-RegProp('HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'HideFileExt', 0); # Show hidden files and folders
-RegProp('HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'Hidden', 1);
-RegPropIfItemExists('HKCU:\Software\Microsoft\Windows\CurrentVersion\SearchSettings', 'IsDynamicSearchBoxEnabled', 0); # Disable dynamic search
-RegPropIfItemExists('HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Start\HideTaskViewButton', 'value', 1); # Hide the task view button in the taskbar
-RegPropIfItemExists('HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'TaskbarMn', 0); # Hide the chat/teams icon in the taskbar
-RegPropIfItemExists('HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', 'TaskbarDa', 0); # Hide widgets in the taskbar
-DelItemIfItemExists('HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}') # Delete recycle bin desktop shortcut
-RegPropIfItemExists('HKCU:\Software\Microsoft\Windows\CurrentVersion\Search', 'SearchboxTaskbarMode', 0); # Hide the search input in the taskbar
+RegPropIfItemExists 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' 'SystemUsesLightTheme' 0; # Force dark theme
+RegPropIfItemExists 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' 'NoLockScreen' 1; # Disable lock screen, go right to login
+RegProp 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' 'HideFileExt' 0; # Show hidden files and folders
+RegProp 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' 'Hidden' 1;
+RegPropIfItemExists 'HKCU:\Software\Microsoft\Windows\CurrentVersion\SearchSettings' 'IsDynamicSearchBoxEnabled' 0; # Disable dynamic search
+RegPropIfItemExists 'HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Start\HideTaskViewButton' 'value' 1; # Hide the task view button in the taskbar
+RegPropIfItemExists 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' 'TaskbarMn' 0; # Hide the chat/teams icon in the taskbar
+RegPropIfItemExists 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' 'TaskbarDa' 0; # Hide widgets in the taskbar
+DelItemIfItemExists 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{645FF040-5081-101B-9F08-00AA002F954E}'; # Delete recycle bin desktop shortcut
+RegPropIfItemExists 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Search' 'SearchboxTaskbarMode' 0; # Hide the search input in the taskbar
