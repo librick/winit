@@ -8,5 +8,4 @@ Clone this repo
 `git clone https://github.com/librick/winit.git`  
 Change directories into the repo  
 `cd winit`  
-Run the script  
-`C:\winit\install.ps1`  
+Run the scripts
