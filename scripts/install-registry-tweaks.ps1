@@ -22,3 +22,8 @@ New-ItemProperty -Path $HideFileExt_Path -Name $Hidden_Name -Value 1 -PropertyTy
 $DynamicSearch_Path = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\SearchSettings'
 $DynamicSearch_Name = 'IsDynamicSearchBoxEnabled'
 New-ItemProperty -Path $DynamicSearch_Path -Name $DynamicSearch_Name -Value 0 -Type Dword -Force
+
+# Delete the recycle bin desktop shortcut
+$RecycleBin_Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace'
+$RecycleBin_Key = '645FF040-5081-101B-9F08-00AA002F954E'
+Remove-ItemProperty -Path $RecycleBin_Path -Name $RecycleBin_Key -Force
