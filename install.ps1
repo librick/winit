@@ -10,6 +10,7 @@ choco uninstall -y openvpn
 choco uninstall -y vscode vscode.installer
 choco uninstall -y firefox
 choco uninstall -y chrome
+choco uninstall -y sysinternals
 # Install important software with winget
 winget source update
 winget install -e --id OpenVPNTechnologies.OpenVPN
@@ -31,7 +32,7 @@ choco install 7zip.install
 choco install bleachbit
 choco install bleachbit.install
 choco install blender
-choco install chocolatelygui
+choco install chocolateygui
 choco install cmder
 choco install deluge
 choco install gimp
