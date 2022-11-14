@@ -1,10 +1,5 @@
-
-
-# Allow scripts:
-# Set-ExecutionPolicy Bypass -Scope Process
-# Install git with winget:
-# winget install --id Git.Git -e --source winget
-
+# Disable chocolatey confirmation prompts
+choco feature enable -n=allowGlobalConfirmation
 # Remove existing choco packages that might cause conflicts
 choco uninstall -y openvpn
 choco uninstall -y vscode vscode.installer
@@ -14,14 +9,13 @@ choco uninstall -y steam-client
 choco uninstall -y sysinternals
 # Install important software with winget
 winget source update
+winget install -e --id Git.Git
 winget install -e --id OpenVPNTechnologies.OpenVPN
 winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id Mozilla.Firefox
 winget install -e --id Google.Chrome
 winget install -e --id Valve.Steam
-
-# Disable confirmation prompts
-choco feature enable -n=allowGlobalConfirmation
+winget install -e --id OO-Software.ShutUp10
 # Install toolsroot
 mkdir C:\Tools
 choco install toolsroot
