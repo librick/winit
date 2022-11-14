@@ -1,8 +1,8 @@
 # Add folders to Explorer's "Quick access" section
 
 # Create syncthing folder, ignore if it already exists
-if (-not (test-path "C:\Users\user\syncthing") ) {
-    md 'C:\Users\user\syncthing'|out-null
+if (-not (test-path "C:\syncthing") ) {
+    md 'C:\syncthing'|out-null
 }
 
 $o = new-object -com shell.application;
@@ -13,7 +13,7 @@ $($o.Namespace("shell:::{679f85cb-0220-4080-b29b-5540cc05aab6}").Items() | where
 $o.Namespace('C:\Users\user').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\ProgramData\chocolatey').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Tools\sysinternals').Self.InvokeVerb("pintohome");
-$o.Namespace('C:\Users\user\syncthing').Self.InvokeVerb("pintohome");
+$o.Namespace('C:\syncthing').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Program Files (x86)\Steam').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Users\user\Documents').Self.InvokeVerb("pintohome");
 $o.Namespace('C:\Users\user\Downloads').Self.InvokeVerb("pintohome");
