@@ -1,17 +1,9 @@
 class ChocoHelper {
-    static [bool]IsInstalled() {
-        param(
-            [Parameter(Mandatory=$true, Position=0)]
-            [string] $PackageName
-        )
+    static [bool]IsInstalled([string]$PackageName) {
         $existing = choco search -r --local-only --id-only --exact $PackageName;
         return $existing -ne $null -and $existing.Length -gt 0;
     }
-    static LogInstalled() {
-        param(
-            [Parameter(Mandatory=$true, Position=0)]
-            [string] $PackageName
-        )
+    static LogInstalled([string]$PackageName) {
         Write-Host "choco package ${PackageName} is already installed, skipping" `
             -ForegroundColor green -BackgroundColor black;
     }
