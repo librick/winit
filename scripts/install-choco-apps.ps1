@@ -44,6 +44,7 @@ ChocoInstall deluge
 ChocoInstall gimp
 ChocoInstall keepassxc
 ChocoInstall libreoffice-still
+ChocoInstall openrgb
 ChocoInstall openvpn
 ChocoInstall putty
 ChocoInstall rufus
