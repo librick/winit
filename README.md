@@ -14,3 +14,8 @@ Clone this repo
 Change directories into the repo  
 `cd winit`  
 Run the scripts
+
+### Additional steps
+- Change default apps
+    - Settings > Apps > Brave
+    - Settings > Apps > VLC media player
