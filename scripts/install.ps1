@@ -1,7 +1,7 @@
 # Run other scripts
-.\install-settings.ps1
-.\install-quick-access.ps1
-.\install-wallpapers.ps1
+C:\winit\scripts\install-settings.ps1
+C:\winit\scripts\install-quick-access.ps1
+C:\winit\scripts\install-wallpapers.ps1
 
 # Disable chocolatey confirmation prompts
 choco feature enable -n=allowGlobalConfirmation
