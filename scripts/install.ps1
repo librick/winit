@@ -1,3 +1,8 @@
+# Run other scripts
+.\install-settings.ps1
+.\install-quick-access.ps1
+.\install-wallpapers.ps1
+
 # Disable chocolatey confirmation prompts
 choco feature enable -n=allowGlobalConfirmation
 # Remove existing choco packages that might cause conflicts
