@@ -6,12 +6,13 @@ C:\winit\scripts\install-wallpapers.ps1
 # Disable chocolatey confirmation prompts
 choco feature enable -n=allowGlobalConfirmation
 # Remove existing choco packages that might cause conflicts
-choco uninstall -y openvpn
-choco uninstall -y vscode vscode.installer
-choco uninstall -y firefox
-choco uninstall -y chrome
-choco uninstall -y steam-client
-choco uninstall -y sysinternals
+# TODO: Check if these exist first
+#choco uninstall -y openvpn
+#choco uninstall -y vscode vscode.installer
+#choco uninstall -y firefox
+#choco uninstall -y chrome
+#choco uninstall -y steam-client
+#choco uninstall -y sysinternals
 # Install important software with winget
 winget source update
 winget install -e --id Git.Git
